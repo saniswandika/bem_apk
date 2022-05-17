@@ -25,14 +25,14 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('/css/style.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('/css/logo.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('/sass/app.css') }}">
-    <title>stmik-amikbandung</title>
+    <title>stmik bandung</title>
 </head>
 
 <body>
     {{-- navbar --}}
     <nav class="navbar navbar-expand-lg navbar-light ">
         <div class="container">
-            <a class="navbar-brand" href="#"><img class="logo2" src="{{ asset('images/download.png') }}"></a>
+            <a class="navbar-brand" href="#"><img class="logo2" src="{{ asset('images/stimik.png') }}"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
                 aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -66,8 +66,8 @@
 
     <div class="jumbotron jumbotron-fluid">
         <div class="container">
-            <h1 class="display-4">STMIK AMIK BANDUNG<br> <img class="logo"
-                    src="{{ asset('images/download.png') }}">
+            <h1 class="display-4">STMIK BANDUNG<br>
+                <img class="logo"src="{{ asset('images/stimik.png') }}">
         </div>
         <div class="template-demo">
             <a href="#" data-toggle="modal" data-target="#modalcreate"><button type="button" class="btn btn-outline-secondary btn-lg">Join To Organization</button></a>
