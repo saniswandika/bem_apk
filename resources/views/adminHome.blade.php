@@ -34,7 +34,7 @@
       <!-- partial:partials/_sidebar.html -->
       <nav class="sidebar sidebar-offcanvas" id="sidebar">
         <div class="sidebar-brand-wrapper d-none d-lg-flex align-items-center justify-content-center fixed-top">
-          <a class="sidebar-brand brand-logo" href="index.html"><img src="assets/images/logo.svg" alt="logo" /></a>
+          <a class="sidebar-brand brand-logo" href="index.html"><img src="{{ asset('images/logo.svg') }}" alt="logo" /></a>
           <a class="sidebar-brand brand-logo-mini" href="index.html"><img src="assets/images/logo-mini.svg" alt="logo" /></a>
         </div>
         <ul class="nav">
@@ -315,7 +315,7 @@
                   <div class="card-body py-0 px-0 px-sm-3">
                     <div class="row align-items-center">
                       <div class="col-4 col-sm-3 col-xl-2">
-                        <img src="assets/images/dashboard/Group126@2x.png" class="gradient-corona-img img-fluid" alt="">
+                        <img src="{{ asset('images/Group126@2x.png') }}" class="gradient-corona-img img-fluid" alt="">
                       </div>
                       <div class="col-5 col-sm-7 col-xl-8 p-0">
                         <h4 class="mb-1 mb-sm-0"> Welcome To The Registration</h4>
@@ -346,25 +346,12 @@
                                 <div class="preview-thumbnail">
                                     <img src="{{ asset('/image/'.$data->image) }}" alt="image" class="rounded-circle" />
                                 </div>
-                                
-
                                       <div class="preview-item-content d-flex flex-grow">
                                         <div class="flex-grow">
                                           <div class="d-flex d-md-block d-xl-flex justify-content-between">
                                             <h6 class="preview-subject">{{$data->nama}}</h6>
                                             <p class="text-muted text-small">{{$data->created_at}}</p>
-                                            {{-- <form action="{{ route('adminHome.destroy',$data->id) }}" method="POST">
-     
-                                              <a class="btn btn-info" href="{{ route('products.show',$data->id) }}">Show</a>
-                                
-                                              <a class="btn btn-primary" href="{{ route('products.edit',$data->id) }}">Edit</a>
-                               
-                                              @csrf
-                                              @method('DELETE')
-                                  
-                                              <button type="submit" class="btn btn-danger">Delete</button>
-                                          </form> --}}
-                                          <a href="/admin/home/hapus/{{ $data->id }}">
+                                            <a href="/admin/home/hapus/{{ $data->id }}">
                                           <button type="button" class="btn btn-danger btn-rounded btn-fw">Danger</button></a> 
                                           </div>
                                           <p class="text-muted">NPM : {{$data->npm}}.</p>
