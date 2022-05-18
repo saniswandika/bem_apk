@@ -60,6 +60,7 @@
                     @endif
                     </a>
                 </div>
+                
             </div>
         </div>
     </nav>
@@ -70,7 +71,7 @@
                 <img class="logo"src="{{ asset('images/stimik.png') }}">
         </div>
         <div class="template-demo">
-            <a href="#" data-toggle="modal" data-target="#modalcreate"><button type="button" class="btn btn-outline-secondary btn-lg">Join To Organization</button></a>
+            <a href="/pendaftaran"><button type="button" class="btn btn-outline-secondary btn-lg">Join To Organization</button></a>
           </div>
 
     </div>
@@ -87,7 +88,7 @@
                         <h4>login admin</h4>
                         <p>khusus Anggota Resmi </p>
                     </a>
-                    <a class="col-lg btn btn-light mr-2 " href="#" data-toggle="modal" data-target="#modalcreate" class="">
+                    <a class="col-lg btn btn-light mr-2 " href="/pendaftaran" >
                         <img src="{{ asset('images/employee.png') }}" alt="BAAK" class="float-left">
                         <h4>Daftar Menjadi anggota BEM</h4>
                         <p>khusus Pendaftaran</p>

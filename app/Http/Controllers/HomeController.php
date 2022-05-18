@@ -1,8 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\regis;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
 {
@@ -23,10 +24,22 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $ajis = regis::all();
+        return view('Home', compact('ajis'));
     }
     public function adminHome()
     {
-        return view('adminHome');
+        $ajis = regis::all();
+        // dd($products);
+        return view('adminHome', compact('ajis'));
     }
+    public function hapus($id)
+    {
+        // menghapus data pegawai berdasarkan id yang dipilih
+        DB::table('regis')->where('id',$id)->delete();
+            
+        // alihkan halaman ke halaman pegawai
+        return redirect('admin/home');
+    }
+   
 }

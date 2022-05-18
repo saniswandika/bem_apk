@@ -30,7 +30,70 @@
             <div class="card col-lg-6 mx-auto">
               <div class="card-body px-5 py-5">
                 <h3 class="card-title text-left mb-3">Register</h3>
-                <form class="forms-sample">
+                 
+<form action="{{ route('regis.store') }}" method="POST" enctype="multipart/form-data">
+  @csrf
+
+   <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-12">
+          <div class="form-group">
+              <strong>NPM</strong>
+              <input type="text" name="npm" class="form-control" placeholder="Post Title">
+             @error('npm')
+                <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
+             @enderror
+          </div>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-12">
+        <div class="form-group">
+            <strong>Nama </strong>
+            <input type="text" name="nama" class="form-control" placeholder="Post Title">
+           @error('nama')
+              <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
+           @enderror
+        </div>
+        
+    </div>
+      <div class="col-xs-12 col-sm-12 col-md-12">
+          <div class="form-group">
+              <strong>Jurusan </strong>
+              <input type="text" class="form-control" name="jurusan" placeholder="jurusan">
+              @error('jurusan')
+                <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
+              @enderror
+          </div>
+          <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>Alamat </strong>
+                <input type="text" class="form-control"  name="alamat" placeholder="alamat">
+                @error('alamat')
+                  <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
+                @enderror
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12">
+              <div class="form-group">
+                  <strong>Fakultas </strong>
+                  <input type="text" class="form-control"  name="fakultas" placeholder="fakultas">
+                  @error('fakultas')
+                    <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
+                  @enderror
+              </div>
+      </div>        
+      <div class="col-xs-12 col-sm-12 col-md-12">
+          <div class="form-group">
+              <strong>Kartu Tanda Mahasiswa </strong>
+               <input type="file" name="image" class="form-control" placeholder="Post Title">
+              @error('image')
+                <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
+             @enderror
+          </div>
+      </div>
+      <a href="/"><button type="button" class="btn btn-secondary">Close</button></a>
+      <button type="submit" class="btn btn-primary ml-3">Submit</button>
+  </div>
+ 
+</form>
+                {{-- <form class="forms-sample">
                   <div class="form-group">
                     <label for="exampleInputName1">Name</label>
                     <input type="text" class="form-control" id="exampleInputName1" placeholder="Name">
@@ -70,7 +133,7 @@
                   </div>
                   <button type="submit" class="btn btn-primary me-2">Submit</button>
                   <button class="btn btn-dark">Cancel</button>
-                </form>
+                </form> --}}
               </div>
             </div>
           </div>

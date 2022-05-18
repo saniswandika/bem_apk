@@ -2,8 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\auth;
-  
+use App\Http\Controllers\regisController;
 use App\Http\Controllers\HomeController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,11 +17,14 @@ use App\Http\Controllers\HomeController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('/product/welcome');
 });
-Route::get('/pendaftaran', function () {
+Route::get('pendaftaran', function () {
     return view('pendaftaran');
 });
+
+
+Route::resource('/regis', regisController::class);
 
 Auth::routes();
 
@@ -37,4 +41,7 @@ Route::middleware(['auth', 'user-access:user'])->group(function () {
 Route::middleware(['auth', 'user-access:admin'])->group(function () {
   
     Route::get('/admin/home', [HomeController::class, 'adminHome'])->name('admin.home');
+    
+    Route::get('/admin/home/hapus/{id}', [HomeController::class, 'hapus'])->name('hapus');
+    // Route::get('/admin/home', [HomeController::class, 'destroy'])->name('admin.home');
 });
